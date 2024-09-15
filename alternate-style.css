@@ -10,7 +10,6 @@ body{
 }
 header{
     display: flex;
-    width: 100%;
     background-color: rgb(199, 217, 241);
     justify-content: space-between;
     align-items: center;
@@ -19,12 +18,10 @@ header{
     border: 2px solid black;
 }
 .main{
-    width: 100%;
     display: flex;
     flex-direction: row;
     height: auto;
-    width: 100%;
-    flex: 180px 1;
+    width: auto;
 
 }
 footer{
@@ -64,18 +61,16 @@ footer{
     display: flex;
     flex-direction: column;
     height: auto;
-    width: 100%;
 }
 .article-body{
     width: 100%;
-    position: relative;
+    width: 100%;
     display: flex;
     flex-direction: row;
     border: 1px solid black;
 }
 .article-text{
     display: flex;
-    width: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
@@ -100,9 +95,8 @@ h3{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: calc(auto-40px);
+    width: auto;
 }
-
 .menu-item{
     border: 3px solid blue;
     background-color: cyan;
@@ -119,75 +113,4 @@ ul{
     list-style-type: none;
     margin: 0;
     padding: 0;
-}
-a{
-    text-decoration: none;
-}
-.team{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap:wrap;
-    width: 100%;
-    gap: 0;
-    offset-distance: none;
-    min-width: 0;
-    flex-basis: 240px;
-    row-gap: 16px;
-}
-.team-member{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    border: 2px solid darkorange;
-    background-color: darkkhaki;
-    text-align: center;
-    max-width: 240px;
-}
-hr{
-    background-color: black;
-    color: black;
-    border-color: black;
-    width: 80%;
-}
-.feedback{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    max-width: 300px;
-    min-width: 100px;
-    width: auto;
-    padding: 10px;
-    border: 4px solid powderblue;
-    background-color: cornflowerblue;
-    border-radius: 20px;
-    height: auto;
-}
-.residence-card{
-    background-color: lightblue;
-    text-align: center;
-    color: darkslategrey;
-    max-width: 200px;
-    width: auto;
-    min-width: 0;
-    border: 4px solid darkblue;
-    border-radius: 20px;
-    padding: 4px;
-}
-.button-learn{
-    color: black;
-    border-radius: 10px;
-    padding: 4px;
-    border: 2px solid blue;
-    background-color: rgb(80, 80, 255);
-    margin: 10px;
-    text-align: left;
-    text-decoration: none;
-}
-.button-learn:hover{
-    background-color: rgb(0, 0, 207);
-}
-img{
-    margin: none;
 }
