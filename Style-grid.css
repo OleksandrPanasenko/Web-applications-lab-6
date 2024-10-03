@@ -1,0 +1,222 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    display: grid;
+    width: 100vw;
+    grid-template-columns: minmax(120px, 180px) 1fr minmax(120px, 180px);
+    grid-template-rows: 144px 60px auto 144px;
+    width: 100%;
+    min-height: 100vh;
+}
+header{
+    width: 100%;
+    grid-row: 1;
+    grid-column: 1/4;
+    align-items: center;
+    display: grid;
+    grid-template-columns: fit-content auto-fit 1fr;
+    background-color: rgb(199, 217, 241);
+    text-align: right;
+    height: 144px;
+    border: 2px solid black;
+}
+header>.motto{
+    grid-column: 1;
+}
+header>h1{
+    grid-column: 2;
+}
+header>.icons{
+    grid-column: 3;
+}
+.main{
+    width: 100%;
+    height: 100%;
+    width: 100%;
+
+}
+footer{
+    background-color: rgb(199, 217, 241);
+    grid-column: 1/4;
+    grid-row: 4;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    text-align: left;
+    align-items: center;
+    height: 144px;
+    width: 100%;
+    border: 2px solid black;
+}
+.motto{
+    display: grid;
+    max-width: 200px;
+    background-color: white;
+    min-height: 33%;
+    border: 2px solid black;
+    margin: 20px;
+    padding-left: 20px;
+    align-items: center;
+    justify-content: center;
+}
+.motto>h3{
+    padding: 0;
+    margin: 0;
+}
+footer>.contact-us{
+    grid-column: 1;
+    margin: 5px;
+}
+footer>.motto{
+    grid-column: 3;
+}
+header>.motto{
+    grid-column: 1;
+}
+header>h1{
+    grid-column: 2;
+    text-align: center;
+}
+header>.icons{
+    grid-column: 3;
+}
+.side-menu, .article-footnotes{
+    height: 100%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(252, 233, 218);
+    min-width: 120px;
+    max-width: 180px;
+    height: stretch;
+    border: 1px solid black;
+}
+.side-menu{
+    grid-column: 1;
+    grid-row: 2/4;
+}
+.article-footnotes{
+    grid-column: 3;
+    grid-row: 3;
+}
+.article{
+    height: 100%;
+    height: auto;
+    width: 100%;
+}
+.article-body{
+    grid-column: 2;
+    grid-row: 3;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border: 1px solid black;
+}
+.article-text{
+    width: 100%;
+}
+.article-header{
+    grid-column: 2/4;
+    grid-row: 2;
+    background-color: rgb(234, 242, 221);
+    width: 100%;
+    height: 60px;
+    border: 1px solid black;
+    text-align: right;
+    text-justify: center;
+
+}
+h2{
+    margin: 20px;
+}
+h3{
+    text-align: center;
+}
+.content{
+    margin: 20px;
+    width: calc(auto-40px);
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-item{
+    border: 3px solid blue;
+    background-color: cyan;
+    margin: 20px;
+    padding: 12px;
+    text-decoration: none;
+}
+.menu-item:hover{
+    border: 4px solid darkblue;
+    background-color:deepskyblue;
+    text-decoration: underline;
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+.team{
+    width: 100%;
+    gap: 0;
+    offset-distance: none;
+    min-width: 0;
+    row-gap: 16px;
+}
+.team-member{
+    border: 2px solid darkorange;
+    background-color: darkkhaki;
+    text-align: center;
+    max-width: 240px;
+}
+hr{
+    background-color: black;
+    color: black;
+    border-color: black;
+    width: 80%;
+}
+.feedback{
+    max-width: 300px;
+    min-width: 100px;
+    width: auto;
+    padding: 10px;
+    border: 4px solid powderblue;
+    background-color: cornflowerblue;
+    border-radius: 20px;
+    height: auto;
+}
+.residence-card{
+    background-color: lightblue;
+    text-align: center;
+    color: darkslategrey;
+    max-width: 200px;
+    width: auto;
+    min-width: 0;
+    border: 4px solid darkblue;
+    border-radius: 20px;
+    padding: 4px;
+}
+.button-learn{
+    color: black;
+    border-radius: 10px;
+    padding: 4px;
+    border: 2px solid blue;
+    background-color: rgb(80, 80, 255);
+    margin: 10px;
+    text-align: left;
+    text-decoration: none;
+}
+.button-learn:hover{
+    background-color: rgb(0, 0, 207);
+}
+img{
+    margin: none;
+    align-self: center;
+    justify-self: center;
+}

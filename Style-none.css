@@ -1,0 +1,233 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    width: 100%;
+    min-height: 100vh;
+}
+header{
+    display: block;
+    padding: auto;
+    width: 100%;
+    background-color: rgb(199, 217, 241);
+    text-align: right;
+    height: 144px;
+    border: 2px solid black;
+    padding: auto;
+}
+.container{
+    width: 98%;
+    margin-left: auto;
+    height: 100px;
+    display: table;
+    table-layout: auto;
+    margin-top: 20px;
+}
+header>.container>.motto{
+    display: table-cell;
+    vertical-align: middle;
+    width: 200px;
+    max-height: 40px;
+}
+
+header>.container>h1{
+
+    display: table-cell;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+header>.container>.icons{
+    float: inline-end;
+}
+h1{
+    vertical-align: middle;
+}
+.main{
+    width: 100%;
+    height: 100%;
+    display: table;
+}
+footer{
+    display: block;
+    table-layout: auto;
+    background-color: rgb(199, 217, 241);
+    text-align: left;
+    height: 144px;
+    width: 100%;
+    border: 2px solid black;
+}
+.motto{
+    max-width: 200px;
+    background-color: white;
+    min-height: 33%;
+    border: 2px solid black;
+    margin: 20px;
+    padding-left: 20px;
+}
+.motto>h3{
+    padding: 0;
+    margin: 0;
+}
+footer>.container{
+    width: 98%;
+    border-spacing: 1rem 0;
+}
+footer>.container>.contact-us{
+    margin: 5px;
+    display: table-cell;
+}
+footer>.container>.filler{
+    display: 1rem;
+    width: auto;
+}
+footer>.container>.motto{
+    display: table-cell;
+    width: 200px;
+    vertical-align: middle;
+}
+
+header>h1{
+    text-align: center;
+}
+
+.side-menu, .article-footnotes{
+    display: table-cell;
+    vertical-align: middle;
+    padding: 10px;
+    height: 100%;
+    background-color: rgb(252, 233, 218);
+    min-width: 120px;
+    max-width: 180px;
+    height: stretch;
+    border: 1px solid black;
+}
+.side-menu{
+}
+.article-footnotes{
+}
+.article{
+    display: table-cell;
+    height: 100%;
+    height: auto;
+    width: 100%;
+}
+.article-body{
+    display: table;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border: 1px solid black;
+}
+.article-text{
+    width: 100%;
+    vertical-align: middle;
+    
+}
+.article-header{
+    background-color: rgb(234, 242, 221);
+    width: 100%;
+    height: 60px;
+    border: 1px solid black;
+    text-align: right;
+    text-justify: center;
+
+}
+h2{
+    margin: 20px;
+}
+h3{
+    text-align: center;
+}
+.content{
+    margin: 20px;
+    width: calc(auto-40px);
+    display: table;
+}
+.content>img{
+    display: table-cell;
+    margin: auto;
+}
+
+.menu-item{
+    border: 3px solid blue;
+    background-color: cyan;
+    margin: 20px;
+    padding: 12px;
+    text-decoration: none;
+}
+.menu-item:hover{
+    border: 4px solid darkblue;
+    background-color:deepskyblue;
+    text-decoration: underline;
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+.team{
+    width: 100%;
+    gap: 0;
+    offset-distance: none;
+    min-width: 0;
+    row-gap: 16px;
+}
+.team-member{
+    border: 2px solid darkorange;
+    background-color: darkkhaki;
+    text-align: center;
+    max-width: 240px;
+}
+hr{
+    background-color: black;
+    color: black;
+    border-color: black;
+    width: 80%;
+}
+.feedback{
+    max-width: 300px;
+    min-width: 100px;
+    width: auto;
+    padding: 10px;
+    border: 4px solid powderblue;
+    background-color: cornflowerblue;
+    border-radius: 20px;
+    height: auto;
+}
+.residence-card{
+    background-color: lightblue;
+    text-align: center;
+    color: darkslategrey;
+    max-width: 200px;
+    width: auto;
+    min-width: 0;
+    border: 4px solid darkblue;
+    border-radius: 20px;
+    padding: 4px;
+}
+.button-learn{
+    color: black;
+    border-radius: 10px;
+    padding: 4px;
+    border: 2px solid blue;
+    background-color: rgb(80, 80, 255);
+    margin: 10px;
+    text-align: left;
+    text-decoration: none;
+}
+.button-learn:hover{
+    background-color: rgb(0, 0, 207);
+}
+img{
+    margin: none;
+    align-self: center;
+    justify-self: center;
+}
