@@ -197,6 +197,9 @@ img{
 }
 
 @media only screen and (max-width:600px) {
+    ul{
+        align-self: center;
+    }
     header{
         flex-direction: column-reverse;
         height: auto;
@@ -223,6 +226,7 @@ img{
     }
     .hamburger-filling-footer,.hamburger-filling-header{
         display: none;
+        align-self: center;
     }
     .side-menu, .article-footnotes{
         width: 100%;
