@@ -227,6 +227,8 @@ img{
     .hamburger-filling-footer,.hamburger-filling-header{
         display: none;
         align-self: center;
+        align-items: center;
+        justify-content: center;
     }
     .side-menu, .article-footnotes{
         width: 100%;
