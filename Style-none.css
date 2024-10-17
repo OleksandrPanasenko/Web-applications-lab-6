@@ -106,10 +106,6 @@ header>h1{
     height: stretch;
     border: 1px solid black;
 }
-.side-menu{
-}
-.article-footnotes{
-}
 .article{
     display: table-cell, table;
     height: calc(100%-60px);
@@ -230,3 +226,4 @@ img{
     align-self: center;
     justify-self: center;
 }
+
