@@ -39,12 +39,13 @@ function getCookie(Name){
     }
     return null;
 }
-function dealWithCookieOnUpload(){
+async function dealWithCookieOnUpload(){
     cookieName="5th lab 3rd task";
     let cookieContainment=getCookie(cookieName);
     element=document.getElementById("Form-3-task");
     if(cookieContainment!=null){
         element.style.display="hidden";
+            element.innerHTML=`<button onclick="deleteCookie('5th lab 3rd task')">Delete cookie</button>`   
     }
     else{
         element.style.display="block";
@@ -53,23 +54,28 @@ function dealWithCookieOnUpload(){
         
         json_object=JSON.parse(cookieContainment);
         if(!json_object.object_cookie_confirmed){
-            let result=confirm(`The cookie preserved is ${cookieContainment}\nMin value: ${json_object.object_min}\nMax value: ${json_object.object_max}\n\nDo you want to save it?`);
+            await wait(400);
+            let result;
+            result=confirm(`The cookie preserved is ${cookieContainment}\nMin value: ${json_object.object_min}\nMax value: ${json_object.object_max}\n\nDo you want to save it?`); 
+            
             if(result==true){
                 json_object.object_cookie_confirmed=true;
                 saveDataInCookie(cookieName, json_object);
                 console.log(json_object);
-                alert("Please, reload the page");
+                alert("Cookie was saved! Please, reload the page");
             }
             else{
                 deleteCookie(cookieName);
                 alert("cookie wasn't preserved; page will be reloaded");
                 window.location.reload();
             }
-            
         }
-        element.innerHTML=`<button onclick="deleteCookie('5th lab 3rd task')">Delete cookie</button>`
+        
     }
 }
 function deleteCookie(name){
     document.cookie = name+"=; expires=Thu, 01 Jan 1970 00:00:00 UTC;"
+}
+function wait(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
 }

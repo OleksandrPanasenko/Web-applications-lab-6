@@ -6,7 +6,7 @@ function InitialiseHidingTables(){
         element.addEventListener('mousemove', ()=>OnMoveTable(elementName));
         element.addEventListener('mouseleave', ()=>HideTable(elementName));
         if(localStorage.getItem(`table-${elementName}-table`)) {
-            localStorage.getItem(`table-${elementName}-table-check`, "true")
+            localStorage.setItem(`table-${elementName}-table-check`, "true")
             element.innerHTML="";
             OnMoveTable(elementName);
         }
@@ -17,7 +17,7 @@ function OnMoveTable(className){
     hoveredElement=getElement(className);
 //if div doesn't contain said table
     if(!hoveredElement.innerHTML.includes("table-for-fifth")){
-        hoveredElement.innerHTML+=`
+        let toAdd=`
         <form class="table-for-fifth">
             <div id="table-${className}-table"></div>
             <input type="button" value="AddRow" onclick="AddRowFifth('table-${className}-table')">
@@ -25,10 +25,11 @@ function OnMoveTable(className){
             <input type="button" value="Save Changes" onclick="SaveChangesToJsonFifth('table-${className}-table')">
             `
         if(localStorage.getItem(`table-${className}-table-check`)){    
-            hoveredElement.innerHTML+=`<input type="button" value="Delete JSON and resume view" onclick="DeleteJson('table-${className}-table')">`
+            toAdd+=`<input type="button" value="Delete JSON and resume view" onclick="DeleteJson('table-${className}-table')">`
         }
-            hoveredElement.innerHTML+=`</form>
+            toAdd+=`</form>
         `
+        hoveredElement.innerHTML+=toAdd;
 //fill with saved
         element=document.getElementById(`table-${className}-table`);
         json_object=localStorage.getItem(`table-${className}-table`);
@@ -44,12 +45,15 @@ function OnMoveTable(className){
     }
 //if it has already
     else{
-        getElement(className).getElementsByClassName("table-for-fifth")[0].style.display="block";
-        getElement(className).style.minHeight="fit-content";
+        getElement(className).getElementsByClassName("table-for-fifth")[0].style.display="flex";
+        getElement(className).style.minHeight="max-content";
+        getElement(className).getElementsByClassName("table-for-fifth")[0].style.width="min-content";
     }
 }
 function AddRowFifth(idName){ 
-    document.getElementById(idName).innerHTML+="<input type='text'>";
+    const input=document.createElement("input");
+    input.type="text";
+    document.getElementById(idName).appendChild(input);
 }
 function DeleteRowFifth(idName){
     inputArray=document.getElementById(idName).getElementsByTagName("Input");
@@ -77,6 +81,6 @@ function getElement(elementName){
 }
 function DeleteJson(jsonName){
     localStorage.removeItem(jsonName);
-    localStorage.removeItem(`${elementName}-check`)
+    localStorage.removeItem(`${jsonName}-check`)
     window.location.reload();
 }
