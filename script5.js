@@ -9,6 +9,7 @@ function InitialiseHidingTables(){
             localStorage.setItem(`table-${elementName}-table-check`, "true")
             element.innerHTML="";
             OnMoveTable(elementName);
+            OnMoveTable(elementName);
             HideTable(elementName);
         }
     }
