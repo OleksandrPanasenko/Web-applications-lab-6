@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Heavenmakers</title>
-    <link rel="icon" href="images/logo.png">
-    <link rel="stylesheet" href="Style.css">
+    <link rel="icon" href="{{url_for('static',filename='images/logo.png')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Style.css') }}">
     <script src="https://kit.fontawesome.com/2a812ff966.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -15,19 +15,22 @@
         </div>
         <h1>Heavenmakers</h1>
         <div class="icons">
-            <a href="index.html"><img src="images/logo.png" alt="logo" height="100px"></a>
+            <a href="index.html"><img src="{{url_for('static',filename='images/logo.png')}}" alt="logo" height="100px"></a>
         </div>
     </header>
     <div class="main">
         <div class="side-menu">
             <h3 style="margin-left: 10px;">Navigation</h3>
             <ul>
-                <li><a href="index.html"><div class="menu-item">Main page</div></a></li>
-                <li><a href="Plans.html"><div class="menu-item">Usual plans</div></a></li>
-                <li><a href="Estates.html"><div class="menu-item">Estates</div></a></li>
-                <li><a href="Vacations and retirement.html"><div class="menu-item">Vacations and retirement</div></a></li>
-                <li><a href="Happiness room.html"><div class="menu-item">Happiness box</div></a></li>
-                <li><a href="About us.html"><div class="menu-item">About us</div></a></li>
+                <li><a href="{{ url_for('page',page='with the help of service.html') }}"><div class="menu-item">HTML for email</div></a></li>
+                    <li><a href="{{ url_for('page',page='index copy.html') }}"><div class="menu-item">Main page-grid version</div></a></li>
+                    <li><a href="{{ url_for('page',page='index no grid no flex.html') }}"><div class="menu-item">Main page-table version</div></a></li>
+                    <li><a href="{{ url_for('page',page='index.html') }}"><div class="menu-item">Main page</div></a></li>
+                    <li><a href="{{ url_for('page',page='Plans.html') }}"><div class="menu-item">Usual plans</div></a></li>
+                    <li><a href="{{ url_for('page',page='Estates.html') }}"><div class="menu-item">Estates</div></a></li>
+                    <li><a href="{{ url_for('page',page='Vacations and retirement.html') }}"><div class="menu-item">Vacations and retirement</div></a></li>
+                    <li><a href="{{ url_for('page',page='Happiness room.html') }}"><div class="menu-item">Happiness box</div></a></li>
+                    <li><a href="{{ url_for('page',page='About us.html') }}"><div class="menu-item">About us</div></a></li>
             </ul>
         </div>
         <div class="article">
@@ -35,28 +38,28 @@
             <div class="article-body">
                 <div class="article-text">
                     <div class="content">
-                        <img src="images/choice.jpg" width="100%" style="max-width: 300px;" alt="">
+                        <img src="{{url_for('static',filename='images/choice.jpg')}}" width="100%" style="max-width: 300px;" alt="">
                         We offer a range of lifestyle plans designed to fit different needs and preferences, with each one fully customizable to suit your personal utopia:
 
                         <h3>Tranquility Plan</h3>
-                        <img src="images/utopia-tranquility.png" width="100%" style="max-width: 300px;" alt="">
+                        <img src="{{url_for('static',filename='images/utopia-tranquility.png')}}" width="100%" style="max-width: 300px;" alt="">
                         Ideal for those who seek peace, simplicity, and a slower pace of life, the Tranquility Plan is 
                         all about creating an environment of calm and serenity. You’ll be surrounded by natural beauty, minimal distractions, 
                         and spaces designed for meditation, reflection, and relaxation. This plan includes access to wellness programs, soothing environments, 
                         and mindfulness-enhancing activities, perfect for clients who prioritize inner peace and a stress-free existence.
                         <h3>Adventure Plan</h3>
-                        <img src="images/utopia-travel.jpg" width="100%" style="max-width: 300px;" alt="">
+                        <img src="{{url_for('static',filename='images/utopia-travel.jpg')}}" width="100%" style="max-width: 300px;" alt="">
                         For the thrill-seekers and explorers, the Adventure Plan offers dynamic environments and exhilarating experiences. 
                         Whether you want to embark on virtual expeditions across uncharted landscapes, engage in adrenaline-pumping sports, or dive into high-energy activities, 
                         this plan is packed with excitement. Customizable simulations, VR challenges, and real-life adventure zones provide endless opportunities to push your limits and embrace the unexpected.
 
                         <h3>Balance Plan</h3>
-                        <img src="images/utopia-balance.jpg" width="100%" style="max-width: 300px;" alt="">
+                        <img src="{{url_for('static',filename='images/utopia-balance.jpg')}}" width="100%" style="max-width: 300px;" alt="">
                         The Balance Plan is designed for those who value harmony in all aspects of life. It blends productive workspaces with relaxing retreats, offering a perfect equilibrium between professional growth, 
                         personal relaxation, and social connection. With this plan, you’ll enjoy access to work-from-home solutions, collaborative social hubs, and personal wellness areas, ensuring you’re never too far from work, play, or downtime.
 
                         <h3>Unlimited Plan</h3>
-                        <img src="images/utopia-harmony.jpg" width="100%" style="max-width: 300px;" alt="">
+                        <img src="{{url_for('static',filename='images/utopia-harmony.jpg')}}" width="100%" style="max-width: 300px;" alt="">
                         For those who refuse to be confined by any single lifestyle, the Unlimited Plan offers the ultimate flexibility. This plan adapts to your changing desires, evolving as you do. 
                         Whether you want tranquility one day and adventure the next, or a seamless combination of both, the Unlimited Plan provides limitless possibilities. It integrates elements from 
                         all other plans, ensuring you have access to everything—whenever and however you want.
@@ -66,10 +69,10 @@
                 <div class="article-footnotes">
                     <h5>Our Partners</h5>
                     
-                    <a href="https://futurama.fandom.com/wiki/Planet_Express"><img src="images/partner-logo-futurama.png" width="100%" alt="planet express"></a>
-                    <a href="https://pixlr.com/image-generator/"><img src="images/partner-ai-inferala.png" width="100%" alt="inferala"></a>
-                    <a href="https://boardgamegeek.com/boardgame/167791/terraforming-mars"><img src="images/partner-mars terraforming.png" width="100%" alt="helion"></a>
-                    <a href="https://disney.fandom.com/wiki/Buy_n_Large"><img src="images/partner-wallee.png" width="100%" alt="BnL"></a>
+                    <a href="https://futurama.fandom.com/wiki/Planet_Express"><img src="{{url_for('static',filename='images/partner-logo-futurama.png')}}" width="100%" alt="planet express"></a>
+                        <a href="https://pixlr.com/image-generator/"><img src="{{url_for('static',filename='images/partner-ai-inferala.png')}}" width="100%" alt="inferala"></a>
+                        <a href="https://boardgamegeek.com/boardgame/167791/terraforming-mars"><img src="{{url_for('static',filename='images/partner-mars terraforming.png')}}" width="100%" alt="helion"></a>
+                        <a href="https://disney.fandom.com/wiki/Buy_n_Large"><img src="{{url_for('static',filename='images/partner-wallee.png')}}" width="100%" alt="BnL"></a>
                 </div>
             </div>
         </div>

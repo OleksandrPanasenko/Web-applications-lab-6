@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Heavenmakers</title>
-    <link rel="icon" href="images/logo.png">
-    <link rel="stylesheet" href="Style.css">
+    <link rel="icon" href="{{url_for('static',filename='images/logo.png')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Style.css') }}">
     <script src="https://kit.fontawesome.com/2a812ff966.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -15,19 +15,22 @@
         </div>
         <h1>Heavenmakers</h1>
         <div class="icons">
-            <a href="index.html"><img src="images/logo.png" alt="logo" height="100px"></a>
+            <a href="index.html"><img src="{{url_for('static',filename='images/logo.png')}}" alt="logo" height="100px"></a>
         </div>
     </header>
     <div class="main">
         <div class="side-menu">
             <h3 style="margin-left: 10px;">Navigation</h3>
             <ul>
-                <li><a href="index.html"><div class="menu-item">Main page</div></a></li>
-                <li><a href="Plans.html"><div class="menu-item">Usual plans</div></a></li>
-                <li><a href="Estates.html"><div class="menu-item">Estates</div></a></li>
-                <li><a href="Vacations and retirement.html"><div class="menu-item">Vacations and retirement</div></a></li>
-                <li><a href="Happiness room.html"><div class="menu-item">Happiness box</div></a></li>
-                <li><a href="About us.html"><div class="menu-item">About us</div></a></li>
+                <li><a href="{{ url_for('page',page='with the help of service.html') }}"><div class="menu-item">HTML for email</div></a></li>
+                    <li><a href="{{ url_for('page',page='index copy.html') }}"><div class="menu-item">Main page-grid version</div></a></li>
+                    <li><a href="{{ url_for('page',page='index no grid no flex.html') }}"><div class="menu-item">Main page-table version</div></a></li>
+                    <li><a href="{{ url_for('page',page='index.html') }}"><div class="menu-item">Main page</div></a></li>
+                    <li><a href="{{ url_for('page',page='Plans.html') }}"><div class="menu-item">Usual plans</div></a></li>
+                    <li><a href="{{ url_for('page',page='Estates.html') }}"><div class="menu-item">Estates</div></a></li>
+                    <li><a href="{{ url_for('page',page='Vacations and retirement.html') }}"><div class="menu-item">Vacations and retirement</div></a></li>
+                    <li><a href="{{ url_for('page',page='Happiness room.html') }}"><div class="menu-item">Happiness box</div></a></li>
+                    <li><a href="{{ url_for('page',page='About us.html') }}"><div class="menu-item">About us</div></a></li>
             </ul>
         </div>
         <div class="article">
@@ -38,7 +41,7 @@
                         Experience the ultimate in relaxation and fulfillment with our carefully curated retirement and vacation packages. Tailored to your needs and desires, each option offers a unique way to enjoy life to the fullest, whether you're planning for your golden years or looking for a rejuvenating escape.
                         
                         <h3>Golden Utopia: Luxurious Retirement Living</h3>
-                        <img src="images/utopia-retirement.avif" width="100%" style="max-width: 300px;" alt="">
+                        <img src="{{url_for('static',filename='images/utopia-retirement.avif')}}" width="100%" style="max-width: 300px;" alt="">
                         Our Golden Utopia retirement communities are designed for those who seek luxury, comfort, and a sense of purpose in their golden years. These communities are more than just a place to live—they are vibrant hubs of activity and connection, where every day feels like a vacation.
                         <br>
                         Residents can enjoy endless leisure activities, from art classes and nature walks to gourmet dining and spa treatments. Social opportunities abound, with clubs, group excursions, and community events that foster meaningful connections with like-minded individuals. Health and wellness are central to the Golden Utopia experience, with access to top-tier medical care, fitness programs, and holistic therapies designed to enhance your physical and emotional well-being.
@@ -46,7 +49,7 @@
                         Each residence is fully customizable, offering elegant interiors, private outdoor spaces, and all the amenities you need to live in comfort and style. Whether you prefer a tranquil garden retreat or a more lively, social atmosphere, Golden Utopia provides the perfect balance of relaxation, fulfillment, and luxury.
 
                         <h3>Utopian Escapes: Immersive Vacation Experiences</h3>
-                        <img src="images/utopia-vacation.jpg" width="100%" style="max-width: 300px;" alt="">
+                        <img src="{{url_for('static',filename='images/utopia-vacation.jpg')}}" width="100%" style="max-width: 300px;" alt="">
                         For clients looking for a short-term getaway, our Utopian Escapes offer immersive vacation experiences that go far beyond the ordinary. Choose from a variety of unique destinations, each designed to transport you to a world of your choosing.
                         <br>
                         For those craving peace and solitude, we offer private island retreats with pristine beaches, crystal-clear waters, and the ultimate in seclusion. These eco-friendly havens are perfect for unwinding in nature, practicing mindfulness, or simply enjoying the serenity of an untouched paradise. Personal chefs, spa services, and curated experiences are all available to ensure your stay is nothing short of extraordinary.
@@ -60,10 +63,10 @@
                 <div class="article-footnotes">
                     <h5>Our Partners</h5>
                     
-                    <a href="https://futurama.fandom.com/wiki/Planet_Express"><img src="images/partner-logo-futurama.png" width="100%" alt="planet express"></a>
-                    <a href="https://pixlr.com/image-generator/"><img src="images/partner-ai-inferala.png" width="100%" alt="inferala"></a>
-                    <a href="https://boardgamegeek.com/boardgame/167791/terraforming-mars"><img src="images/partner-mars terraforming.png" width="100%" alt="helion"></a>
-                    <a href="https://disney.fandom.com/wiki/Buy_n_Large"><img src="images/partner-wallee.png" width="100%" alt="BnL"></a>
+                    <a href="https://futurama.fandom.com/wiki/Planet_Express"><img src="{{url_for('static',filename='images/partner-logo-futurama.png')}}" width="100%" alt="planet express"></a>
+                        <a href="https://pixlr.com/image-generator/"><img src="{{url_for('static',filename='images/partner-ai-inferala.png')}}" width="100%" alt="inferala"></a>
+                        <a href="https://boardgamegeek.com/boardgame/167791/terraforming-mars"><img src="{{url_for('static',filename='images/partner-mars terraforming.png')}}" width="100%" alt="helion"></a>
+                        <a href="https://disney.fandom.com/wiki/Buy_n_Large"><img src="{{url_for('static',filename='images/partner-wallee.png')}}" width="100%" alt="BnL"></a>
                 </div>
             </div>
         </div>
