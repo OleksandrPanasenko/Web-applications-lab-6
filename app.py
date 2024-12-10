@@ -105,6 +105,6 @@ def page(page):
 
 #request_started.connect(clear_images_on_start_to_declutter, app)
 if __name__ == '__main__':
-    app.run(debug=True)
-
+    port = int(os.environ.get('PORT', 5000))
+    app.run(debug=True, host='0.0.0.0', port=port)
 
