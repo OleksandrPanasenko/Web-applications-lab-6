@@ -48,7 +48,6 @@ def upload():
             carousel_data.append({'image_url': filepath, 'caption': caption, 'text': text})
 
         return redirect(url_for('index'))
-    print('rendering happening@!')
     return render_template('index_carousell_input.html', carousel_data=carousel_data)
 
 @app.route('/edit_slide/<int:slide_index>', methods=['POST'])
